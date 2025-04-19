@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:nifty_language_learner/screens/homeScreen.dart';
+import 'package:nifty_language_learner/screens/HomeScreen.dart';
+import 'package:nifty_language_learner/screens/languageScreen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,14 +15,14 @@ final GoRouter _router = GoRouter(
       builder: (BuildContext context, GoRouterState state) {
         return const HomeScreen();
       },
-      // routes: <RouteBase>[
-      //   GoRoute(
-      //     path: 'details',
-      //     builder: (BuildContext context, GoRouterState state) {
-      //       return const DetailsScreen();
-      //     },
-      //   ),
-      // ],
+      routes: <RouteBase>[
+        GoRoute(
+          path: 'languageScreen',
+          builder: (BuildContext context, GoRouterState state) {
+            return const LanguageScreen();
+          },
+        ),
+      ],
     ),
   ],
 );
