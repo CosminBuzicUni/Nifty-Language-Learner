@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
-class HomeScreen extends StatelessWidget {
-  const HomeScreen({super.key});
+class WelcomeScreen extends StatelessWidget {
+  const WelcomeScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -11,12 +11,12 @@ class HomeScreen extends StatelessWidget {
       body: Center(
         child: Column(
           children: [
-            Text("Welcome!"),
+            Text("Welcome to Nifty Language Learner!"),
             ElevatedButton(
               onPressed: () {
-                context.go('/languageScreen');
+                context.go('/credentials_screen');
               },
-              child: const Text("Languages"),
+              child: const Text("Continue"),
             ),
           ],
         ),
